@@ -1,0 +1,22 @@
+# Install Oh-My-Zsh on Ubuntu 
+#
+
+ - name: Install Base Packages
+   apt: pkg={{item}} state=present
+   with_items: 
+        - git
+        - git-core
+        - zsh
+        - curl
+
+ - name: Clone Oh-My-Zsh Repo
+   git: clone=true repo=git://github.com/robbyrussell/oh-my-zsh.git dest={{local_home}}/.oh-my-zsh update=no accept_hostkey=true
+ 
+ - name: Remove any older version of .zshrc
+   file: path={{local_home}}/.zshrc state=absent
+
+ - name: Install new .zshrc
+   template: src=../files/.zshrc.j2 dest={{local_home}}/.zshrc
+
+ - name: Switch shell to ZSH
+   shell: chsh -s /bin/zsh
