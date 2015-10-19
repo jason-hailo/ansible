@@ -23,6 +23,10 @@
    include: "{{ playbook_dir }}/roles/golang/tasks/main.yml"
    when: govim_installed.stat.exists
 
+ - name: Install Go tools for vim-go
+   shell: vim +GoBinariesInstall +qall
+   when: govim_installed.stat.exists
+
  - name: Check if YouCompleteMe plugin is installed
    stat: path="{{local_home|default('~/')}}/.vim/bundle/YouCompleteMe/plugin/youcompleteme.vim"
    register: ycm_installed
