@@ -1,0 +1,8 @@
+ - name: Install Terminator
+   apt: pkg=terminator state=present
+
+ - name: Remove default config
+   file: path={{local_home|default('~')}}/.config/terminator/config state=absent
+
+ - name: Install custom config
+   copy: src=../files/config dest={{local_home|default('~')}}/.config/terminator/config owner={{ansible_user_id}}

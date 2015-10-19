@@ -2,9 +2,9 @@
 - hosts: localhost
   become: true
 
-
   roles:
    - ohmyzsh
    - powerline_fonts
    - vim-gnome
    - golang
+   - terminator
