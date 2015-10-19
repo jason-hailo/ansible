@@ -1,0 +1,11 @@
+ - name: "Install VIM Gnome - This has all prebuilt extensions"
+   apt: pkg=vim-gnome state=present
+ 
+ - name: Install Vundle plugin manager
+   git: clone=yes repo=https://github.com/VundleVim/Vundle.vim.git dest="{{local_home|default('~/')}}/.vim/bundle/Vundle.vim" accept_hostkey=yes update=no
+ 
+ - name: "Remove any old .vimrc"
+   file: path={{local_home|default('~/')}}/.vimrc state=absent 
+ 
+ - name: Install custom .vimrc
+   template: src=../files/vimrc.j2 dest="{{local_home|default('~/')}}/.vimrc"
