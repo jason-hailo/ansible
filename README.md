@@ -1,5 +1,6 @@
 # Ansible Playbook 
 
+Tested on Ubuntu 15.04 64bit
 
 Installs the following:
 
