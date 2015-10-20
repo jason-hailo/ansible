@@ -2,3 +2,5 @@ vim_plugins:
  - 'fatih/vim-go'
  - 'Valloric/YouCompleteMe'
  - 'SirVer/ultisnips'
+ - 'chase/vim-ansible-yaml'
+ - 'autoclose'

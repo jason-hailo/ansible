@@ -1,6 +1,15 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
+set background=dark
+set tabstop=4
+set shiftwidth=4
+""set expandtab
+set listchars=tab:\|\ 
+set list
+""
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -53,3 +62,4 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+

@@ -2,10 +2,15 @@
 - hosts: localhost
   become: true
 
+  vars:
+    user: jasonw
+    group: jasonw
+
   roles:
    - { role: ohmyzsh, tags: ohmyzsh }
-   - { role: powerline_fonts, tags: [powerline, ohmyzsh] }            
-   - { role: vim-gnome, tags: [vim-gnome, go] }
+   - { role: powerline_fonts, tags: powerline }            
+   - { role: vim-gnome, tags: vim-gnome }
    - { role: golang, tags: [golang, go] }
    - { role: terminator, tags: terminator }
    - { role: docker, tags: docker }
+

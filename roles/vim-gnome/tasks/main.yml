@@ -16,7 +16,7 @@
  - name: Check if Vim-Go Is Installed
    stat: path="{{local_home|default('~/')}}/.vim/bundle/vim-go/plugin/go.vim"
    register: govim_installed   
-           
+
 # - debug: var="{{govim_installed}}"
 
  - name: Install Go Lang if Vim-Go plugin is installed
