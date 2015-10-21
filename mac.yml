@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  remote_user: jason.witting        
+
+  vars:
+    user: jason.witting
+    group: jason.witting
+
+  roles:
+   - { role: ohmyzsh, tags: ohmyzsh }
+   - { role: powerline_fonts, tags: powerline } 
+   - { role: vim, tags: vim }           
+

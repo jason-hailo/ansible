@@ -1,6 +1,7 @@
  - name: Install Terminator
    apt: pkg=terminator state=present
-
+   become: true
+   
  - name: Remove default config
    file: path={{local_home|default('~')}}/.config/terminator/config state=absent
 

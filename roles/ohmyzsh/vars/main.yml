@@ -3,3 +3,4 @@ zsh_theme: "agnoster"
 zsh_plugins: "aws git history golang"
 zsh_export_paths: 
   GOPATH: ~/workspace/go
+  GOROOT: /usr/local/opt/go/libexec
